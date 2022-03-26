@@ -1,11 +1,20 @@
 const express = require('express');
 const port = 8000;
+const bodyParser = require('body-parser');
 
 const app = express();
 
 //setup the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+//use body-parser
+app.use(bodyParser.urlencoded({
+    extended: false 
+}));
+
+//access static files
+app.use(express.static('./assets'));
 
 //use express router
 app.use('/', require('./routes'));

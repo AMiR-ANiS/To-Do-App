@@ -7,8 +7,81 @@
     <title>
         <%= title %>
     </title>
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.jpg">
+    <script src="https://kit.fontawesome.com/e83ab0ff70.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1> Rendered from ejs</h1>
+    <div id="app-container">
+        <div id="app">
+            <h1 id="app-title">
+                <i class="fa-solid fa-clipboard-list"></i>
+                TODO App
+            </h1>
+            <form id="get-details" method="POST" action="/add-item">
+                <h2 id="desc-title">DESCRIPTION</h2>
+                <textarea id="desc" name="description" placeholder="what do you need to do?" required></textarea>
+                <div id="category-due-date-container">
+                    <div id="category">
+                        <fieldset>
+                            <legend>CATEGORY:</legend>
+                            <select id="drop-down" name="category" required>
+                                <option id="option-placeholder" value="" disabled selected>Select a category</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="school">School</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div id="due">
+                        <fieldset>
+                            <legend>DUE DATE:</legend>
+                            <input type="date" name="due">
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+            <div id="button-controls">
+                <div id="add-button">
+                    <button type="submit" form="get-details">
+                        <i class="fa-solid fa-plus"></i>
+                        ADD TASK
+                    </button>
+                </div>
+                <div id="delete-button">
+                    <button type="submit">
+                        <i class="fa-solid fa-trash-can"></i>
+                        DELETE TASKS
+                    </button>
+                </div>
+            </div>
+            <form id="show-details" method="GET" action="/delete-tasks">
+                <% for(let i of todo_list) { %>
+                    <div class="display-item">
+                        <input type="checkbox" name="<%= index++ %>" value="<%= i._id %>">
+                        <div class="description">
+                            <div class="desc-1">
+                                <p>
+                                    <%= i.description %>
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <%= i.due %>
+                                </p>
+                            </div>
+                            <div class="desc-2">
+                                <span>
+                                    <%= i.category %>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/home.js"></script>
 </body>
 </html>
