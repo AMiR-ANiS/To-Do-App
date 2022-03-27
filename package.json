@@ -22,10 +22,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AMiR-ANiS/TodoApp.git"
+    "url": "git+https://github.com/AMiR-ANiS/TodoListApp.git"
   },
   "bugs": {
-    "url": "https://github.com/AMiR-ANiS/TodoApp/issues"
+    "url": "https://github.com/AMiR-ANiS/TodoListApp/issues"
   },
-  "homepage": "https://github.com/AMiR-ANiS/TodoApp#readme"
+  "homepage": "https://github.com/AMiR-ANiS/TodoListApp#readme"
 }
