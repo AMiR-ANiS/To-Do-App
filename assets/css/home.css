@@ -1,3 +1,4 @@
+/* styling body */
 body{
     margin: 0;
     padding: 0;
@@ -9,6 +10,8 @@ body{
     display: flex;
     justify-content: space-around;
 }
+
+/*styling app*/
 #app{
     background-color: rgb(170, 170, 170);
     width: 80%;

@@ -1,3 +1,5 @@
+
+// function for displaying current date and time
 function displayCurrentDate(){
     const today = new Date();
     let time = today.toLocaleTimeString();
@@ -6,6 +8,8 @@ function displayCurrentDate(){
     document.getElementById('current-time').innerHTML = current;
     setTimeout(displayCurrentDate, 1000);
 }
+
+// function for changing theme of app
 function changeTheme(){
     if(lightTheme){
         document.body.style.backgroundColor = "rgb(170, 170, 170)";
