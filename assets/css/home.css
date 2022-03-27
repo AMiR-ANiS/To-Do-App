@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(80, 80, 80);
 }
 
 #app-container{
@@ -10,11 +10,18 @@ body{
     justify-content: space-around;
 }
 #app{
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(170, 170, 170);
     width: 80%;
 }
 #app-title{
     text-align: center;
+}
+#theme-controls{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 #get-details{
     width: 100%;
@@ -51,7 +58,6 @@ body{
     display: flex;
     height: 100px;
     justify-content: space-around;
-    color: white;
     align-items: center;
 }
 #button-controls>div:hover{

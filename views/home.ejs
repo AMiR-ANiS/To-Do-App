@@ -18,6 +18,13 @@
                 <i class="fa-solid fa-clipboard-list"></i>
                 TODO App
             </h1>
+            <div id="theme-controls">
+                <div id="local-time">
+                    <strong> Local time: </strong>
+                    <span id="current-time"></span>
+                </div>
+                <button type="button" id="change-theme">Dark mode</button>
+            </div>
             <form id="get-details" method="POST" action="/add-item">
                 <h2 id="desc-title">DESCRIPTION</h2>
                 <textarea id="desc" name="description" placeholder="what do you need to do?" required></textarea>
@@ -68,7 +75,12 @@
                                 </p>
                                 <p>
                                     <i class="fa-solid fa-clock"></i>
-                                    <%= i.due %>
+                                    <% if(i.due == null){ %>
+                                        <%= 'No deadline' %>
+                                    <% }else{ %>
+                                        <% let dueDate = i.due.toString(); %>
+                                        <%= dueDate.substring(0,15) %>
+                                    <% } %>
                                 </p>
                             </div>
                             <div class="desc-2">

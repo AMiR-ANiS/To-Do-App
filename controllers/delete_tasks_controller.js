@@ -10,5 +10,6 @@ module.exports.deleteItem = function(req, res){
             }
         });
     }
+    console.log('tasks deleted !');
     res.redirect('back');
 }
