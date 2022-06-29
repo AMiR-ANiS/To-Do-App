@@ -4,7 +4,7 @@
   "description": "a todo list app using express js and mongo DB",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/AMiR-ANiS/To-Do-App/issues"
   },
-  "homepage": "https://github.com/AMiR-ANiS/To-Do-App#readme"
+  "homepage": "https://github.com/AMiR-ANiS/To-Do-App#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
 }
